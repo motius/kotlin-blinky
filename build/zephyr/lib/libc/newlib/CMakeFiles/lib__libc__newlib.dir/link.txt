@@ -1,2 +1,0 @@
-ccache /home/plam/.konan/dependencies/gcc-arm-none-eabi-7-2017-q4-major-linux/bin/arm-none-eabi-ar qc liblib__libc__newlib.a  CMakeFiles/lib__libc__newlib.dir/libc-hooks.c.obj
-ccache /home/plam/.konan/dependencies/gcc-arm-none-eabi-7-2017-q4-major-linux/bin/arm-none-eabi-ranlib liblib__libc__newlib.a

@@ -1,2 +1,0 @@
-ccache /home/plam/.konan/dependencies/gcc-arm-none-eabi-7-2017-q4-major-linux/bin/arm-none-eabi-ar qc liboffsets.a  CMakeFiles/offsets.dir/arch/arm/core/offsets/offsets.c.obj
-ccache /home/plam/.konan/dependencies/gcc-arm-none-eabi-7-2017-q4-major-linux/bin/arm-none-eabi-ranlib liboffsets.a
