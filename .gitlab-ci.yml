@@ -2,6 +2,7 @@ stages:
     - build
 
 build:
+    stage: build
     image: registry.motius.de/microservices/kotlin-native
     script:
         - build.sh
