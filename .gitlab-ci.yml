@@ -1,0 +1,12 @@
+stages:
+    - build
+
+build:
+    image: registry.motius.de/microservices/kotlin-native
+    script:
+        - build.sh
+    artifacts:
+        paths:
+            - "build"
+    tags:
+        - staging-docker
