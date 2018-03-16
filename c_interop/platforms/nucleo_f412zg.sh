@@ -26,7 +26,7 @@ fi
 
 cinterop -def $DIR/c_interop/platforms/$BOARD.def \
         -pkg platform.zephyr.$BOARD \
-        -copt '-Xclang -DSTM32F412xx' \
+        -copt '-Xclang -DSTM32F412Zx' \
         -copt -I$ZEPHYR_BASE/kernel/include \
         -copt -I$ZEPHYR_BASE/arch/arm/include \
         -copt -I$ZEPHYR_BASE/arch/arm/soc/st_stm32/stm32f4 \

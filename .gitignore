@@ -1,1 +1,3 @@
-build
+build/*
+c_interop/platforms/build/*
+*.swp
