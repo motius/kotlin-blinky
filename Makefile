@@ -1,4 +1,4 @@
-ZEPHYR_BASE=/home/plam/Projects/zephyr
+ZEPHYR_BASE=./zephyr
 
 all: stm32f4_disco nucleo_f412zg
 
