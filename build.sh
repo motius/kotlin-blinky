@@ -55,6 +55,8 @@ rm -rf $DIR/build || exit 1
 mkdir -p $DIR/build && cd $DIR/build
 
 export ZEPHYR_GCC_VARIANT=gccarmemb
+echo $DIR
+echo $HOME
 export GCCARMEMB_TOOLCHAIN_PATH="$HOME/gcc-arm-none-eabi-7-2017-q4-major-linux/bin"
 
 [ -f CMakeCache.txt ] || cmake -DCMAKE_VERBOSE_MAKEFILE=ON -DBOARD=$BOARD .. || exit 1
