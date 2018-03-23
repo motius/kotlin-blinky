@@ -1,4 +1,4 @@
-ZEPHYR_BASE=/zephyr
+ZEPHYR_BASE=/root/zephyr
 
 all: stm32f4_disco nucleo_f412zg
 
