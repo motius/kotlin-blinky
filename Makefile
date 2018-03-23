@@ -1,6 +1,6 @@
 ZEPHYR_BASE=/root/zephyr
 
-all: nucleo_f412zg
+all: stm32f4_disco
 
 stm32f4_disco:
 	bash ./build.sh -b stm32f4_disco -z $(ZEPHYR_BASE)
