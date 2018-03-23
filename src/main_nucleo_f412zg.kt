@@ -17,23 +17,36 @@
 import platform.zephyr.nucleo_f412zg.*
 import kotlinx.cinterop.*
 
-fun blinky(value: Int) {
-
-    val port = LED0_GPIO_PORT
-    val led = LED0_GPIO_PIN
-    var toggler = false
+class Pin(port: String, pin: Int) {
+    var state: Boolean = false
+    val port: String = port
+    val pin: Int = pin
     val dev = device_get_binding(port)
 
-    gpio_pin_configure(dev, led, GPIO_DIR_OUT)
+    init {
+        gpio_pin_configure(this.dev, this.pin, GPIO_DIR_OUT)
+        gpio_pin_write(this.dev, this.pin, 0)
+        this.state = false
+    }
 
-    while (true) {
-         /* Set pin to HIGH/LOW every 1 second */
-         gpio_pin_write(dev, led, if (toggler) 1 else 0);
-         toggler = !toggler
-         k_sleep(1000 * value);
-   }
+    fun on() {
+        gpio_pin_write(this.dev, this.pin, 1)
+        this.state = true
+    }
+
+    fun off() {
+        gpio_pin_write(this.dev, this.pin, 0)
+        this.state = false
+    }
 }
 
 fun main(args: Array<String>) {
-    blinky(1)
+    val led = Pin(LED0_GPIO_PORT, LED0_GPIO_PIN)
+
+    while (true) {
+        led.on()
+        k_sleep(100);
+        led.off()
+        k_sleep(100);
+    }
 }
