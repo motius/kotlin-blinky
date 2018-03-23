@@ -5,6 +5,7 @@ build:
     stage: build
     image: registry.motius.de/microservices/kotlin-native
     script:
+        - pwd
         - make
     artifacts:
         paths:

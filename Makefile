@@ -1,4 +1,4 @@
-ZEPHYR_BASE=~/Projects/zephyr
+ZEPHYR_BASE=/root/zephyr
 
 all: nucleo_f412zg
 
